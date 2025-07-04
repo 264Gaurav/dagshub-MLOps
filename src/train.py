@@ -62,7 +62,7 @@ def train(data_path,model_path,random_state,n_estimators,max_depth):
 
         ## Log additional metrics \
         mlflow.log_metric("accuracy",accuracy)
-        mlflow.log_param("best_n_estimatios",grid_search.best_params_['n_estimators'])
+        mlflow.log_param("best_n_estimator",grid_search.best_params_['n_estimators'])
         mlflow.log_param("best_max_depth", grid_search.best_params_['max_depth'])
         mlflow.log_param("best_sample_split", grid_search.best_params_['min_samples_split'])
         mlflow.log_param("best_samples_leaf", grid_search.best_params_['min_samples_leaf'])
